@@ -1,9 +1,9 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateBook = /* GraphQL */ `
-  subscription OnCreateBook {
-    onCreateBook {
+export const onCreateProduct = /* GraphQL */ `
+  subscription OnCreateProduct {
+    onCreateProduct {
       id
       title
       description
@@ -16,9 +16,9 @@ export const onCreateBook = /* GraphQL */ `
     }
   }
 `;
-export const onUpdateBook = /* GraphQL */ `
-  subscription OnUpdateBook {
-    onUpdateBook {
+export const onUpdateProduct = /* GraphQL */ `
+  subscription OnUpdateProduct {
+    onUpdateProduct {
       id
       title
       description
@@ -31,9 +31,9 @@ export const onUpdateBook = /* GraphQL */ `
     }
   }
 `;
-export const onDeleteBook = /* GraphQL */ `
-  subscription OnDeleteBook {
-    onDeleteBook {
+export const onDeleteProduct = /* GraphQL */ `
+  subscription OnDeleteProduct {
+    onDeleteProduct {
       id
       title
       description

@@ -4,12 +4,12 @@ export const processOrder = /* GraphQL */ `
   }
 `;
 
-export const createBook = /* GraphQL */ `
-  mutation CreateBook(
-    $input: CreateBookInput!
-    $condition: ModelBookConditionInput
+export const createProduct = /* GraphQL */ `
+  mutation CreateProduct(
+    $input: CreateProductInput!
+    $condition: ModelProductConditionInput
   ) {
-    createBook(input: $input, condition: $condition) {
+    createProduct(input: $input, condition: $condition) {
       id
       title
       description
@@ -20,7 +20,7 @@ export const createBook = /* GraphQL */ `
       orders {
         items {
           id
-          book_id
+          product_id
           order_id
           createdAt
           updatedAt
@@ -32,12 +32,12 @@ export const createBook = /* GraphQL */ `
     }
   }
 `;
-export const updateBook = /* GraphQL */ `
-  mutation UpdateBook(
-    $input: UpdateBookInput!
-    $condition: ModelBookConditionInput
+export const updateProduct = /* GraphQL */ `
+  mutation UpdateProduct(
+    $input: UpdateProductInput!
+    $condition: ModelProductConditionInput
   ) {
-    updateBook(input: $input, condition: $condition) {
+    updateProduct(input: $input, condition: $condition) {
       id
       title
       description
@@ -48,7 +48,7 @@ export const updateBook = /* GraphQL */ `
       orders {
         items {
           id
-          book_id
+          product_id
           order_id
           createdAt
           updatedAt
@@ -60,12 +60,12 @@ export const updateBook = /* GraphQL */ `
     }
   }
 `;
-export const deleteBook = /* GraphQL */ `
-  mutation DeleteBook(
-    $input: DeleteBookInput!
-    $condition: ModelBookConditionInput
+export const deleteProduct = /* GraphQL */ `
+  mutation DeleteProduct(
+    $input: DeleteProductInput!
+    $condition: ModelProductConditionInput
   ) {
-    deleteBook(input: $input, condition: $condition) {
+    deleteProduct(input: $input, condition: $condition) {
       id
       title
       description
@@ -76,7 +76,7 @@ export const deleteBook = /* GraphQL */ `
       orders {
         items {
           id
-          book_id
+          product_id
           order_id
           createdAt
           updatedAt
@@ -88,21 +88,21 @@ export const deleteBook = /* GraphQL */ `
     }
   }
 `;
-export const createBookOrder = /* GraphQL */ `
-  mutation CreateBookOrder(
-    $input: CreateBookOrderInput!
-    $condition: ModelBookOrderConditionInput
+export const createProductOrder = /* GraphQL */ `
+  mutation CreateProductOrder(
+    $input: CreateProductOrderInput!
+    $condition: ModelProductOrderConditionInput
   ) {
-    createBookOrder(input: $input, condition: $condition) {
+    createProductOrder(input: $input, condition: $condition) {
       id
-      book_id
+      product_id
       order_id
       order {
         id
         user
         date
         total
-        books {
+        products {
           nextToken
         }
         createdAt
@@ -110,7 +110,7 @@ export const createBookOrder = /* GraphQL */ `
       }
       createdAt
       updatedAt
-      book {
+      product {
         id
         title
         description
@@ -127,21 +127,21 @@ export const createBookOrder = /* GraphQL */ `
     }
   }
 `;
-export const updateBookOrder = /* GraphQL */ `
-  mutation UpdateBookOrder(
-    $input: UpdateBookOrderInput!
-    $condition: ModelBookOrderConditionInput
+export const updateProductOrder = /* GraphQL */ `
+  mutation UpdateProductOrder(
+    $input: UpdateProductOrderInput!
+    $condition: ModelProductOrderConditionInput
   ) {
-    updateBookOrder(input: $input, condition: $condition) {
+    updateProductOrder(input: $input, condition: $condition) {
       id
-      book_id
+      product_id
       order_id
       order {
         id
         user
         date
         total
-        books {
+        products {
           nextToken
         }
         createdAt
@@ -149,7 +149,7 @@ export const updateBookOrder = /* GraphQL */ `
       }
       createdAt
       updatedAt
-      book {
+      product {
         id
         title
         description
@@ -166,21 +166,21 @@ export const updateBookOrder = /* GraphQL */ `
     }
   }
 `;
-export const deleteBookOrder = /* GraphQL */ `
-  mutation DeleteBookOrder(
-    $input: DeleteBookOrderInput!
-    $condition: ModelBookOrderConditionInput
+export const deleteProductOrder = /* GraphQL */ `
+  mutation DeleteProductOrder(
+    $input: DeleteProductOrderInput!
+    $condition: ModelProductOrderConditionInput
   ) {
-    deleteBookOrder(input: $input, condition: $condition) {
+    deleteProductOrder(input: $input, condition: $condition) {
       id
-      book_id
+      product_id
       order_id
       order {
         id
         user
         date
         total
-        books {
+        products {
           nextToken
         }
         createdAt
@@ -188,7 +188,7 @@ export const deleteBookOrder = /* GraphQL */ `
       }
       createdAt
       updatedAt
-      book {
+      product {
         id
         title
         description
@@ -215,10 +215,10 @@ export const createOrder = /* GraphQL */ `
       user
       date
       total
-      books {
+      products {
         items {
           id
-          book_id
+          product_id
           order_id
           createdAt
           updatedAt
@@ -240,10 +240,10 @@ export const updateOrder = /* GraphQL */ `
       user
       date
       total
-      books {
+      products {
         items {
           id
-          book_id
+          product_id
           order_id
           createdAt
           updatedAt
@@ -265,10 +265,10 @@ export const deleteOrder = /* GraphQL */ `
       user
       date
       total
-      books {
+      products {
         items {
           id
-          book_id
+          product_id
           order_id
           createdAt
           updatedAt
